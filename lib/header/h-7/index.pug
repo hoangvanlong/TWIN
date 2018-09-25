@@ -1,33 +1,52 @@
 header.canhcam-header-7
 	nav.navbar.navbar-expand-md.container
 		a.navbar-brand.d-none.d-md-block(href='#')
-			img(src="./img/logo-ang.png", alt="Logo")
+			img(src="./img/twin/index/logo-twin.png", alt="Logo")
 		a.navbar-brand.d-md-none.mr-auto(href='#')
-			img(src="./img/logo-min.png", alt="Logo")
+			img(src="./img/twin/index/logo-twin.png", alt="Logo")
 		#language
 		button.navbar-toggler(type='button', data-toggle='offcanvas', data-target='#CCMenuHeader', aria-controls='CCMenuHeader', aria-expanded='false', aria-label='Toggle navigation')
 			span.mdi.mdi-menu
 
-		#CCMenuHeader.collapse.navbar-collapse.justify-content-end
+		#CCMenuHeader.collapse.navbar-collapse.justify-content-center
 			.title
 				h2 Menu
 				.closebnt
 					i.mdi.mdi-close
 			ul.navbar-nav.mt-2.mt-md-0
 				li.nav-item.active
-					a.nav-link(href='#') Giới thiệu
+					a.nav-link(href='#') Giải pháp
+					//- ul.list-unstyled.sub-menu
+					//- 	li Giải pháp của TWIN
+					//- 		ul.list-unstyled
+					//- 			li
+					//- 				img(src="./img/twin/header/icon-1.png", alt="")
+					//- 				a(href="#") Giải pháp Online to Offline (O2O)
+					//- 			li
+					//- 				img(src="./img/twin/header/icon-2.png", alt="")
+					//- 				a(href="#") Hệ thống quản lý CRM
+					//- 			li
+					//- 				img(src="./img/twin/header/icon-3.png", alt="")
+					//- 				a(href="#") Giải pháp Data Lake
+					//- 	li Giải pháp của Google
+					//- 		ul.list-unstyled
+					//- 			li
+					//- 				img(src="./img/twin/header/icon-4.png", alt="")
+					//- 				a(href="#") Giải pháp Online to Offline (O2O)
+					//- 			li
+					//- 				img(src="./img/twin/header/icon-5.png", alt="")
+					//- 				a(href="#") Hệ thống quản lý CRM
+					//- 			li
+					//- 				img(src="./img/twin/header/icon-6.png", alt="")
+					//- 				a(href="#") Giải pháp Data Lake
 				li.nav-item
-					a.nav-link(href='#') Dự án
+					a.nav-link(href='#') Khách hàng
 				li.nav-item
 					a.nav-link(href='#') Tin tức
 				li.nav-item
-					a.nav-link(href='#') Phát triển bền vững
-				li.nav-item
-					a.nav-link(href='#') Thư viện
-				li.nav-item
-					a.nav-link(href='#') Tuyển dụng
-				li.nav-item
 					a.nav-link(href='#') Liên hệ
+				li.nav-item
+					a.nav-link(href='#') FAQS
 
 
 			.language(k-menu-map-to="#language")
@@ -37,13 +56,6 @@ header.canhcam-header-7
 							span English
 							img(src="./img/icon/usa.png", alt="")
 
-			form.form-inline.my-2.my-md-0.search
-				.input-group
-					input.form-control(type='text', placeholder="Search", aria-label="Search", aria-describedby='basic-addon2')
-					.input-group-append
-						button.btn.btn-primary(type='submit')
-							i.fa.fa-search
-			.my-2.my-md-0.btnsearch.d-none.d-md-block
-				.btn.btn-link
-					i.fa.fa-search
-					i.fa.fa-times
+			.phone(k-menu-map-to="#phone")
+					p.mb-0.d-flex.align-items-center (84.28) 39105523		
+			

@@ -34,7 +34,7 @@
 	.navbar-brand
 		position: relative
 		img
-			max-height: 2rem
+			max-width: 4rem
 			+transition(all ease-in-out .3s)
 	.language
 		+pad(0 1rem 0 0)
@@ -189,7 +189,7 @@
 		.navbar
 			.navbar-brand
 				img
-					max-width: 10rem
+					max-width: 180px
 			.navbar-nav
 				.nav-item
 					.nav-link
@@ -197,14 +197,19 @@
 						+fz(1rem)
 						text-transform: uppercase
 						+transition(all ease-in-out .3s)
+					// .sub-menu
+					// 	display: none
+					// &:hover
+					// 	.sub-menu
+					// 		display: block
 		&.fixedheader
 			.navbar-brand
 				img
-					max-width: 8rem
+					max-width: 180px
 			&.active
 				.navbar-brand
 					img
-						max-width: 2.4rem
+						max-width: 8rem
 				.navbar
 					.navbar-nav
 						.nav-item

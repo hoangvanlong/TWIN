@@ -4,46 +4,41 @@
 //////////////////////////////////////
 
 .canhcam-footer-9
-	background-color: darken(color-get($mau,trang) ,85%)
-	position: relative
+	// background-color: darken(color-get($mau,trang) ,85%)
+	// position: relative
 	z-index: 1
-	color: darken(color-get($mau,trang) ,40%)
+	color: color-get($mau, content-footer)
 	+media-breakpoint-down(xs)
 		text-align: center
 	h4
-		color: darken(color-get($mau,trang) ,80%)
+		color: color-get($mau, title-footer)
 		text-transform: uppercase
 		position: relative
 		+fz(1.2rem)
 		+fw(600)
 		margin-bottom: 1.5rem
 	.canhcam-sub
-		+transform(translateY(-50%))
-		+pos(abs, 0 0 null null)
+		+pad(2rem 0)
 		width: 100%
-		.sub
-			+pad(2rem 0)
-			label
+		// .sub
+		// 	+pad(2rem 0)
+		.item
+			display: flex
+			justify-content: center
+			flex-direction: column
+			text-align: center
+			color: color-get($mau,trang)
+			min-height: r(36px)
+			+media-breakpoint-up(lg)
+				min-height: r(56px)
+			img
+				border-radius: 10px
+			.link
+				+fz(r(24px))
 				text-transform: uppercase
 				color: color-get($mau,trang)
-			.socials
-				ul
-					margin-bottom: 0
-					li
-						a
-							color: color-get($mau,trang)
-							+bor-rad(50%)
-							border: 2px solid color-get($mau,trang)
-							width: 2.2rem
-							height: 2.2rem
-							display: flex
-							justify-content: center
-							align-items: center
-							text-decoration: none
-							i
-								+fz(1rem)
-							&:hover
-								background: rgba(red(color-get($mau,trang)),green(color-get($mau,trang)),blue(color-get($mau,trang)),.3)
+				+media-breakpoint-up(lg)
+					+fz(r(36px))
 
 			.input-group
 				border: 2px solid color-get($mau,trang)
@@ -85,9 +80,19 @@
 						margin-bottom: 0
 
 	.linkfooter
+		background: color-get($mau, footer)
 		padding: 3rem 0
+		border-bottom: 2px solid color-get($mau, border-footer)
 		+media-breakpoint-up(md)
 			+pad(4rem 0)
+		.item
+			color: color-get($mau, extra)
+			i
+				+mar(0 0 1rem)
+			+media-breakpoint-up(lg)
+				max-width: 90%
+				i
+					+mar(0 1rem 0 0)
 		.list-group
 			.list-group-item
 				display: inline-block
@@ -99,38 +104,53 @@
 					+pad(.15rem 0)
 				a
 					font-size: .9rem
-					+link(darken(color-get($mau,trang) ,40%),color-get($mau,main),color-get($mau,main))
-	.copyright
-		background: color-get($mau,trang)
-		+pad(1rem 0)
-		color: darken(color-get($mau,trang) ,30%)
-		.list-group
-			.list-group-item
-				display: inline-block
-				+bg(none, none, none)
-				border: 0
-				white-space: nowrap
-				+pad(.5rem 0)
+					+link(color-get($mau,extra))
+					text-decoration: none
+					&:hover, &:active
+						color: lighten(color-get($mau, extra), 10%)
+			.socials
 				a
-					font-size: .9rem
-					+link(darken(color-get($mau,trang) ,30%),darken(color-get($mau,trang) ,70%),darken(color-get($mau,trang) ,70%))
-			+media-breakpoint-up(md)
-				display: flex
-				flex-direction: row
-				.list-group-item
-					+pad(.15rem 0)
-					a
-						margin-right: calc(1rem + 1px)
-						position: relative
-						&:after
-							display: inline-flex
-							width: 1px
-							height: 100%
-							content: ''
-							+pos(abs, 0 -.5rem null null)
-							background: darken(color-get($mau,trang) ,30%)
-					&:last-child
-						a
-							margin-right: 0
-							&:after
-								content: none
+					color: color-get($mau,extra)
+					display: flex
+					justify-content: center
+					align-items: center
+					text-decoration: none
+					+mar(0 0 1rem 0)
+					i
+						+fz(r(33px))
+					&:hover
+						color: lighten(color-get($mau, extra),10%)
+	.copyright
+		background: color-get($mau,footer)
+		+pad(1rem 0)
+		color: color-get($mau,content-footer)
+		// .list-group
+		// 	.list-group-item
+		// 		display: inline-block
+		// 		+bg(none, none, none)
+		// 		border: 0
+		// 		white-space: nowrap
+		// 		+pad(.5rem 0)
+		// 		a
+		// 			font-size: .9rem
+		// 			+link(darken(color-get($mau,trang) ,30%),darken(color-get($mau,trang) ,70%),darken(color-get($mau,trang) ,70%))
+		// 	+media-breakpoint-up(md)
+		// 		display: flex
+		// 		flex-direction: row
+		// 		.list-group-item
+		// 			+pad(.15rem 0)
+		// 			a
+		// 				margin-right: calc(1rem + 1px)
+		// 				position: relative
+		// 				&:after
+		// 					display: inline-flex
+		// 					width: 1px
+		// 					height: 100%
+		// 					content: ''
+		// 					+pos(abs, 0 -.5rem null null)
+		// 					background: darken(color-get($mau,trang) ,30%)
+		// 			&:last-child
+		// 				a
+		// 					margin-right: 0
+		// 					&:after
+		// 						content: none

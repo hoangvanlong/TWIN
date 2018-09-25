@@ -5,9 +5,11 @@
                 "header/h-7"
             ],
             "body": [
-                "carousel/c-2",
                 "slider/s-1",
-                "gallery/g-2"
+                "index/b-1",
+                "index/b-2",
+                "index/b-3",
+                "index/b-4"
             ],
             "footer": [
                 "footer/f-9"
