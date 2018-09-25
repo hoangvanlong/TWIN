@@ -1,0 +1,17 @@
+{
+    "SETUP": {
+        "index": {
+            "header": [
+                "header/h-7"
+            ],
+            "body": [
+                "carousel/c-2",
+                "slider/s-1",
+                "gallery/g-2"
+            ],
+            "footer": [
+                "footer/f-9"
+            ]
+        }
+    }
+}
