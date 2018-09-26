@@ -1,0 +1,40 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.twin-boxes-4
+	background: darken(color-get($mau, trang),20%)
+	.box-content
+		+media-breakpoint-up(lg)
+			max-width: 80%
+		.h3
+			+pad(.5rem 1rem)
+			+fz(15px)
+			+fw(400)
+		.item
+			.nav
+				li
+					display: inline-block
+					position: relative
+					&:after
+						display: block
+						content: ""
+						position: absolute
+						width: 2px
+						height: 12px
+						background: black
+						top: 50%
+						left: 100%
+						transform: translateX(-50%) translateY(-50%)
+					&:last-child
+						&:after
+							display: none
+		.bottom
+			.sub-content
+				color: color-get($mau, den)
+				text-decoration: none
+				+fz(r(15px))
+				+fw(400)
+				i
+					color: color-get($mau, extra)

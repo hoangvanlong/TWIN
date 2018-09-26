@@ -3,87 +3,209 @@
 // CODE
 //////////////////////////////////////
 
-.canhcam-boxes-12
-	.gallery-lists
-		.info 
-			padding-bottom: 2rem 
-			h3 
-				color: lighten(color-get($mau,main),0%)
+.twin-boxes-1
+	+bg-rad
+	.info 
+		width: 100%
+		+pad(4rem 0)
+		position: relative
+		&:after
+			display: block
+			content: ""
+			width: 0
+			height: 0
+			border-right: 25px solid transparent
+			border-left: 25px solid transparent
+			border-top: 25px solid color-get($mau, extra)
+			position: absolute
+			top: 100%
+			left: 50%
+			transform: translateX(-50%)
+			z-index: 5
+		+media-breakpoint-up(lg)
+			position: relative
+			&:after
+				display: block
+				content: ""
+				width: 0
+				height: 0
+				border-top: 30px solid transparent
+				border-bottom: 30px solid transparent
+				border-left: 30px solid color-get($mau, extra)
+				position: absolute
+				top: 50%
+				left: 100%
+				transform: translateY(-50%)
+				z-index: 5
+		.box-title
+			display: flex
+			flex-direction: column
+			align-items: center
+			.h3 
+				color: color-get($mau,trang)
 				+fw(600)
-				+fz(2rem)
-			.lead 
-				color: darken(color-get($mau,trang),40%)
-			p 
-				a 
-					color: lighten(color-get($mau,main),0%)
-			+media-breakpoint-up(lg)
-				padding-left: 2px
-				padding-bottom: 0
-				height: 100%
-				align-items: center
-				display: flex
-				justify-content: center
-				.container
-					max-width: 500px 
-
+				+fz(r(36px))
+				position: relative
+				+mar(0 0 2rem)
+				// +media-breakpoint-up(md)
+				// 	+mar(0 0 1rem)
+				+media-breakpoint-up(lg)
+					width: 100%
+					overflow: hidden
+				&:after
+					position: absolute
+					display: block
+					content: ""
+					width: 3rem
+					height: 3px
+					top: 120%
+					left: 50%
+					background: color-get($mau, trang)
+					transform: translateX(-50%) translateY(-50%)
+					+media-breakpoint-up(lg)
+						width: 50%
+						top: 50%
+						left: 100%
+			.brief-content
+				color: color-get($mau,trang)
+				+fz(r(15px))
+				+fw(300)
+				+mar(0 0 2rem)
+				+media-breakpoint-up(lg)
+					width: 70%
 		.item
 			display: flex
-			text-decoration: none
-			height: 100%
-			// +bor-rad(5px)
-			overflow: hidden
-			figure
-				overflow: hidden
-				// +bor-rad(5px)
-				margin-bottom: 0
-				.boxzoom
-					overflow: hidden
-					position: relative
-					// +bor-rad(5px)
-					&:after
-						content: ''
-						display: block
-						z-index: -1
-						background: rgba(0,0,0,.5)
-						width: 100%
-						height: 100%
-						+pos(abs, 0 0 null null)
-					// +media-breakpoint-up(sm)
-					// 	max-height: 200px
-					// 	min-height: 200px
-					.zoom-item
-						color: color-get($mau,trang)
-						+pos(abs, 50% null null 50%)
-						+transform(translateX(-50%) translateY(-50%))
-						z-index: 10
-						+fz(7rem)
-						+transition(all .2s ease-in-out)
-						.mdi-play-circle-outline
-							display: block
-						.mdi-play-circle
-							display: none
-					img
-						// +bor-rad(5px 5px 0 0)
-						// +transition(all .5s ease-in-out)
-						width: 100%
-				figcaption
-					padding: 1rem 0 0 0
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			.box-img
+				display: flex
+				align-items: center
+				justify-content: center
+				border: 1px solid color-get($mau, before)
+				padding: 1rem
+				border-radius: 50%
+				width: r(136.66px)
+				min-height: r(136.66px)
+				img
+					max-width: r(65px)
+					max-height: r(65px)
+			.box-content
+				color: color-get($mau, trang)
+				+fz(r(18px))
+				+fw(400)
+		+media-breakpoint-up(lg)
+			// padding-left: 2px
+			// padding-bottom: 0
+			// height: 100%
+			// align-items: center
+			// display: flex
+			// justify-content: center
+			.container
+				max-width: r(600px)
 
-					h3
-						+fz(1.1rem)
-						+fw(400)
-						color: color-get($mau,den)
-						margin-bottom: 0
-			&:hover
-				figure
-					.boxzoom
-						&:after
-							z-index: 1
-						img
-							// +transform(scale(1.1))
-						.zoom-item
+	.canhcam-slider-box-1
+		.owl-carousel
+			// Main
+			.owl-stage-outer
+				.item
+					display: flex
+					justify-content: center
+					align-items: center
+					min-height: 280px
+					+media-breakpoint-up(sm)
+						min-height: 320px
+					+media-breakpoint-up(md)
+						min-height: 380px
+					+media-breakpoint-up(lg)
+						min-height: 480px
+					.title
+						position: relative
+						// +pos(abs, null null 3rem 0)
+						text-align: left
+						+pad(0 1rem)
+						.s-1, .s-2, .s-3
+							+fz(r(60px))
+							+lh(r(50px))
+							+fw(600)
+							color: color-get($mau,trang)
 							+text-sha(1px 1px 3px rgba(0,0,0,.4))
-							.mdi-play-circle-outline
-								display: none
-							.mdi-play-circle
-								display: block
+							+mar(0 0 r(11px) 0)
+							text-transform: uppercase
+						.s-2
+							text-transform: initial
+							+fz(r(24px))
+							+fw(400)
+							+mar(0)
+							span
+								text-transform: uppercase
+								+fw(600)
+								+fz(r(36px))
+						.s-3
+							+fz(r(36px))
+							+lh(r(36px))
+						p
+							color: color-get($mau,trang)
+							+text-sha(2px 2px 3px rgba(0,0,0,.2))
+							+fz(r(24px))
+							+lh(r(36px))
+							+fw(400)
+							+mar(0)
+						&:before
+							position: absolute
+							display: block
+							content: ""
+							width: r(8px)
+							height: 100%
+							background: color-get($mau, before)
+							top: 0
+							left: -1rem
+
+			// Nav
+			.owl-nav
+				button
+					&.owl-prev, &.owl-next
+						+pad(.5rem_)
+						width: 3rem
+						height: 3rem
+						background: rgba(0,0,0,.3)
+						color: rgba(255,255,255,.3)
+						+bor-rad(50%)
+						text-align: center
+						&:focus
+							outline: none
+					&:hover, &.active
+						&.owl-prev, &.owl-next
+							background: color-get($mau,main)
+							color: color-get($mau,trang)
+				+media-breakpoint-up(md)
+					+opacity(0)
+					margin-top: 0
+					+transition(all .3s ease-in-out)
+					button
+						&.owl-prev, &.owl-next
+							margin: 0
+							+transform(translateY(-50%))
+							&:focus
+								outline: none
+						&.owl-prev
+							+pos(abs, 50% null null 1rem)
+						&.owl-next
+							+pos(abs, 50% 1rem null null)
+			// Dots
+			.owl-dots
+				+pos(abs, null null 0 0)
+				width: 100%
+				.owl-dot
+					&:focus
+						outline: none
+					span
+						background: darken(color-get($mau,trang),5%)
+					&.active
+						span
+							background: color-get($mau,main)
+		&:hover
+			+media-breakpoint-up(md)
+				.owl-carousel
+					.owl-nav
+						+opacity(1)
