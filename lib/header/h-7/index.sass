@@ -4,10 +4,20 @@
 //////////////////////////////////////
 
 .canhcam-header-7
-	background: color-get($mau,trang)
-	border-bottom: 1px solid darken(color-get($mau,trang),20%)
+	background-image: linear-gradient(90deg,#226eac, #429be3)
 	.navbar
 		align-items: center
+		.phone
+			+fz(1rem)
+			+fw(400)
+			color: color-get($mau, trang)
+		.user
+			+fz(1.5rem)
+			color: color-get($mau, trang)
+			// &:before
+			// 	display: block
+			// 	content: ""
+			// 	position: absolute
 		.title
 			order: 0
 			display: none
@@ -28,7 +38,8 @@
 	.navbar-toggler
 		border: 0
 		.mdi
-			font-size: 2rem
+			font-size: 3rem
+			color: color-get($mau, trang)
 		&:focus
 			outline: none
 	.navbar-brand
@@ -86,9 +97,37 @@
 				+pad(1rem 2rem)
 				+fz(1.3rem)
 				font-weight: 300
-				.nav-link
-					+link(color-get($mau,trang), color-get($mau,trang), color-get($mau,trang))
-
+				.nav-item
+					.nav-link
+						+link(color-get($mau,trang), color-get($mau,trang), color-get($mau,trang))
+					.sub-menu
+						+pad(r(44px) r(36px))
+						display: none
+						background: color-get($mau,header)
+						position: fixed
+						.h3
+							+fz(r(18px))
+							+fw(500)
+							color: color-get($mau,content-menu)
+							+mar(0 0 2rem)
+						.nav-sub-item
+							display: flex
+							align-items: center
+							min-height: r(73px)
+							max-height: r(73px)
+							+mar(0 0 2rem)
+							img
+								margin-right: 2rem
+							.nav-sub-link
+								max-width: 45%
+								a
+									color: color-get($mau, trang)
+									text-decoration: none
+									+fw(300)
+									+fz(r(16px))
+					&:active, &:focus
+						.sub-menu
+							display: block
 	&.expand
 		.navbar
 			.title
@@ -110,11 +149,11 @@
 			padding-bottom: 0
 			position: relative
 			.navbar-brand
-				+pos(abs, .75rem null null 1rem)
+				+pos(abs, 0 null null 1rem)
 				z-index: 1000
 				+pad(.25rem .15rem)
 				background: color-get($mau,trang)
-				+bor-rad(3px)
+				+bor-rad(0 0 5px 5px)
 				img
 					max-height: initial
 					max-width: 7rem
@@ -122,32 +161,64 @@
 				.nav-item
 					margin-left: 1px
 					.nav-link
-						color: darken(color-get($mau,trang),70%)
+						color: color-get($mau,trang)
 						white-space: nowrap
 						+fw(400)
 						+pad(1.5rem .4rem)
-						+fz(.9rem)
+						+fz(1rem)
 						text-align: center
 						height: 100%
 						&:hover
-							+box-sha(0 -3px 0 color-get($mau,main), inset)
-							color: color-get($mau,main)
+							background: color-get($mau, hover-header)
+							// +box-sha(0 -3px 0 color-get($mau,main), inset)
+							color: color-get($mau,trang)
 					&.active, &.show
 						.nav-link
-							+box-sha(0 -3px 0 color-get($mau,main), inset)
-							color: color-get($mau,main)
+							background: color-get($mau, hover-header)
+							// +box-sha(0 -3px 0 color-get($mau,main), inset)
+							color: color-get($mau,trang)
 
 	+media-breakpoint-up(md)
 		&.fixedheader
 			.navbar-brand
 				img
-					max-width: 4rem
+					max-width: 7rem
 			&.active
 				.navbar-brand
 					img
-						max-width: 2.2rem
+						max-width: 7rem
 		.navbar
 			position: relative
+			.navbar-nav
+				.nav-item
+					.sub-menu
+						+pad(r(44px) r(36px))
+						display: none
+						background: color-get($mau,header)
+						position: fixed
+						.h3
+							+fz(1rem)
+							+fw(400)
+							color: color-get($mau,content-menu)
+							+mar(0 0 2rem)
+						.nav-sub-item
+							display: flex
+							align-items: center
+							min-height: r(73px)
+							max-height: r(73px)
+							+mar(0 0 2rem)
+							img
+								margin-right: 2rem
+							.nav-sub-link
+								max-width: 45%
+								a
+									color: color-get($mau, trang)
+									text-decoration: none
+									+fw(300)
+									+fz(1rem)
+					&:hover
+						.sub-menu
+							display: block
 		.navbar-collapse
 			position: static
 		.search
@@ -193,15 +264,37 @@
 			.navbar-nav
 				.nav-item
 					.nav-link
+						color: color-get($mau, trang)
 						+pad(2.5rem .5rem)
 						+fz(1rem)
+						+fw(400)
 						text-transform: uppercase
 						+transition(all ease-in-out .3s)
-					// .sub-menu
-					// 	display: none
-					// &:hover
-					// 	.sub-menu
-					// 		display: block
+					.sub-menu
+						+pad(r(44px) r(36px))
+						display: none
+						background: color-get($mau,header)
+						position: fixed
+						.h3
+							+fz(r(18px))
+							+fw(500)
+							color: color-get($mau,content-menu)
+							+mar(0 0 2rem)
+						.nav-sub-item
+							display: flex
+							align-items: center
+							min-height: r(73px)
+							max-height: r(73px)
+							+mar(0 0 2rem)
+							img
+								margin-right: 2rem
+							.nav-sub-link
+								max-width: 45%
+								a
+									color: color-get($mau, trang)
+									text-decoration: none
+									+fw(300)
+									+fz(r(16px))
 		&.fixedheader
 			.navbar-brand
 				img
@@ -220,7 +313,7 @@
 			.navbar-nav
 				.nav-item
 					.nav-link
-						+fw(bold)
+						+fw(400)
 						+pad(2.5rem 1rem)
 		&.fixedheader
 			&.active

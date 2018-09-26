@@ -3,7 +3,7 @@ header.canhcam-header-7
 		a.navbar-brand.d-none.d-md-block(href='#')
 			img(src="./img/twin/index/logo-twin.png", alt="Logo")
 		a.navbar-brand.d-md-none.mr-auto(href='#')
-			img(src="./img/twin/index/logo-twin.png", alt="Logo")
+			img(src="./img/twin/index/logo-tiny.png", alt="Logo")
 		#language
 		button.navbar-toggler(type='button', data-toggle='offcanvas', data-target='#CCMenuHeader', aria-controls='CCMenuHeader', aria-expanded='false', aria-label='Toggle navigation')
 			span.mdi.mdi-menu
@@ -16,46 +16,89 @@ header.canhcam-header-7
 			ul.navbar-nav.mt-2.mt-md-0
 				li.nav-item.active
 					a.nav-link(href='#') Giải pháp
-					//- ul.list-unstyled.sub-menu
-					//- 	li Giải pháp của TWIN
-					//- 		ul.list-unstyled
-					//- 			li
-					//- 				img(src="./img/twin/header/icon-1.png", alt="")
-					//- 				a(href="#") Giải pháp Online to Offline (O2O)
-					//- 			li
-					//- 				img(src="./img/twin/header/icon-2.png", alt="")
-					//- 				a(href="#") Hệ thống quản lý CRM
-					//- 			li
-					//- 				img(src="./img/twin/header/icon-3.png", alt="")
-					//- 				a(href="#") Giải pháp Data Lake
-					//- 	li Giải pháp của Google
-					//- 		ul.list-unstyled
-					//- 			li
-					//- 				img(src="./img/twin/header/icon-4.png", alt="")
-					//- 				a(href="#") Giải pháp Online to Offline (O2O)
-					//- 			li
-					//- 				img(src="./img/twin/header/icon-5.png", alt="")
-					//- 				a(href="#") Hệ thống quản lý CRM
-					//- 			li
-					//- 				img(src="./img/twin/header/icon-6.png", alt="")
-					//- 				a(href="#") Giải pháp Data Lake
+						i.ml-2.fas.fa-angle-down
+					.sub-menu
+						.row
+							.col-md-6
+								h3.h3 Giải pháp của TWIN
+								ul.list-unstyled
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-1.png", alt="")
+										.nav-sub-link
+											a(href="#") Giải pháp Online to Offline (O2O)
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-2.png", alt="")
+										.nav-sub-link
+											a(href="#") Hệ thống quản lý CRM
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-3.png", alt="")
+										.nav-sub-link
+											a(href="#") Giải pháp Data Lake
+							.col-md-6
+								h3.h3 Giải pháp của Google
+								ul.list-unstyled
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-4.png", alt="")
+										.nav-sub-link
+											a(href="#") Google Cloud Speech-to-Text
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-5.png", alt="")
+										.nav-sub-link
+											a(href="#") Google Bigquery
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-6.png", alt="")
+										.nav-sub-link
+											a(href="#") Google Cloud Vision
 				li.nav-item
 					a.nav-link(href='#') Khách hàng
+						i.ml-2.fas.fa-angle-down
+					.sub-menu
+						.row
+							.col-md-6
+								h3.h3 Giải pháp của TWIN
+								ul.list-unstyled
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-1.png", alt="")
+										.nav-sub-link
+											a(href="#") Giải pháp Online to Offline (O2O)
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-2.png", alt="")
+										.nav-sub-link
+											a(href="#") Hệ thống quản lý CRM
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-3.png", alt="")
+										.nav-sub-link
+											a(href="#") Giải pháp Data Lake
+							.col-md-6
+								h3.h3 Giải pháp của Google
+								ul.list-unstyled
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-4.png", alt="")
+										.nav-sub-link
+											a(href="#") Google Cloud Speech-to-Text
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-5.png", alt="")
+										.nav-sub-link
+											a(href="#") Google Bigquery
+									li.nav-sub-item
+										img(src="./img/twin/header/icon-6.png", alt="")
+										.nav-sub-link
+											a(href="#") Google Cloud Vision
 				li.nav-item
 					a.nav-link(href='#') Tin tức
 				li.nav-item
 					a.nav-link(href='#') Liên hệ
 				li.nav-item
 					a.nav-link(href='#') FAQS
+		.phone(k-menu-map-to="#phone")
+			p.mb-0.d-flex.align-items-center (84.28) 39105523	
+		.user(k-menu-map-to="#user")
+			i.ml-3.fas.fa-user-circle
+		.language(k-menu-map-to="#language")
+			ul.list-unstyled
+				li
+					a(href='#')
+						span English
+						img(src="./img/icon/usa.png", alt="")
 
-
-			.language(k-menu-map-to="#language")
-				ul.list-unstyled
-					li
-						a(href='#')
-							span English
-							img(src="./img/icon/usa.png", alt="")
-
-			.phone(k-menu-map-to="#phone")
-					p.mb-0.d-flex.align-items-center (84.28) 39105523		
 			
