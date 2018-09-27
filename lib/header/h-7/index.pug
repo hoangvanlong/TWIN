@@ -1,20 +1,21 @@
 header.canhcam-header-7
 	nav.navbar.navbar-expand-md.container
-		a.navbar-brand.d-none.d-md-block(href='#')
-			img(src="./img/twin/index/logo-twin.png", alt="Logo")
-		a.navbar-brand.d-md-none.mr-auto(href='#')
-			img(src="./img/twin/index/logo-tiny.png", alt="Logo")
-		#language
+		.img-logo
+			a.navbar-brand.d-none.d-md-block(href='#')
+				img(src="./img/twin/index/logo-twin.png", alt="Logo")
+			a.navbar-brand.d-md-none.mr-auto(href='#')
+				img(src="./img/twin/index/logo-tiny.png", alt="Logo")
+		#language.ml-auto.d-lg-none
 		button.navbar-toggler(type='button', data-toggle='offcanvas', data-target='#CCMenuHeader', aria-controls='CCMenuHeader', aria-expanded='false', aria-label='Toggle navigation')
 			span.mdi.mdi-menu
 
-		#CCMenuHeader.collapse.navbar-collapse.justify-content-center
+		#CCMenuHeader.collapse.navbar-collapse.nav-show.justify-content-center
 			.title
 				h2 Menu
 				.closebnt
 					i.mdi.mdi-close
 			ul.navbar-nav.mt-2.mt-md-0
-				li.nav-item.active
+				li.nav-item.active.has-sub
 					a.nav-link(href='#') Giải pháp
 						i.ml-2.fas.fa-angle-down
 					.sub-menu
@@ -49,7 +50,7 @@ header.canhcam-header-7
 										img(src="./img/twin/header/icon-6.png", alt="")
 										.nav-sub-link
 											a(href="#") Google Cloud Vision
-				li.nav-item
+				li.nav-item.has-sub
 					a.nav-link(href='#') Khách hàng
 						i.ml-2.fas.fa-angle-down
 					.sub-menu
@@ -90,6 +91,7 @@ header.canhcam-header-7
 					a.nav-link(href='#') Liên hệ
 				li.nav-item
 					a.nav-link(href='#') FAQS
+				#phone
 		.phone(k-menu-map-to="#phone")
 			p.mb-0.d-flex.align-items-center (84.28) 39105523	
 		.user(k-menu-map-to="#user")

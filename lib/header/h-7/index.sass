@@ -125,9 +125,6 @@
 									text-decoration: none
 									+fw(300)
 									+fz(r(16px))
-					&:active, &:focus
-						.sub-menu
-							display: block
 	&.expand
 		.navbar
 			.title
@@ -149,7 +146,7 @@
 			padding-bottom: 0
 			position: relative
 			.navbar-brand
-				+pos(abs, 0 null null 1rem)
+				// +pos(abs, 0 null null 1rem)
 				z-index: 1000
 				+pad(.25rem .15rem)
 				background: color-get($mau,trang)
