@@ -1,8 +1,6 @@
 function setMain() {
     var
         headerHeight = $("header").outerHeight();
-    i = $('.canhcam-header-7 .navbar .nav-show').outerHeight()
-    x = $('.canhcam-header-7 .img-logo .navbar-brand')
     if ($(window).width() <= CANHCAM_APP.CHANGE_GRID) {
         $("main").css('padding-top', headerHeight + 'px')
     } else {
@@ -12,7 +10,7 @@ function setMain() {
             if (!CANHCAM_APP.ACTIVE_FIXED_HEADER) {
                 $("main").css('padding-top', 'initial')
             } else {
-                $("main").css('padding-top', headerHeight + x - i + 'px')
+                $("main").css('padding-top', headerHeight + 'px')
             }
         }
     }
