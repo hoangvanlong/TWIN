@@ -50,15 +50,17 @@
 						+lh(r(36px))
 						+fw(400)
 						+mar(0)
-					&:before
-						position: absolute
-						display: block
-						content: ""
-						width: r(8px)
-						height: 100%
-						background: color-get($mau, before)
-						top: 0
-						left: -1rem
+				+media-breakpoint-up(md)
+					.title
+						&:before
+							position: absolute
+							display: block
+							content: ""
+							width: r(8px)
+							height: 100%
+							background: color-get($mau, before)
+							top: 0
+							left: -1rem
 
 		// Nav
 		.owl-nav

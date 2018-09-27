@@ -113,6 +113,22 @@
 					justify-content: center
 					align-items: center
 					min-height: 280px
+					&:first-child
+						align-items: initial
+						justify-content: flex-end
+						+pad(4rem 1.5rem)
+						text-transform: uppercase
+						+fw(600)
+						color: color-get($mau, main)
+						+media-breakpoint-up(sm)
+							+pad(r(75px) r(50px))
+							+fz(r(20px))
+						+media-breakpoint-up(md)
+							+pad(r(75px) r(50px))
+							+fz(r(30px))
+						+media-breakpoint-up(lg)
+							+pad(r(75px) r(20px))
+							+fz(r(30px))
 					+media-breakpoint-up(sm)
 						min-height: 320px
 					+media-breakpoint-up(md)
