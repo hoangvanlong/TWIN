@@ -85,15 +85,23 @@
 				border: 1px solid color-get($mau, before)
 				padding: 1rem
 				border-radius: 50%
-				width: r(136.66px)
-				min-height: r(136.66px)
+				width: 8rem
+				min-height: 8rem
 				img
-					max-width: r(65px)
-					max-height: r(65px)
+					max-width: 4rem
+					max-height: 4rem
+				+media-breakpoint-up(md)
+					width: r(136.66px)
+					min-height: r(136.66px)
+					img
+						max-width: r(65px)
+						max-height: r(65px)
 			.box-content
 				color: color-get($mau, trang)
-				+fz(r(18px))
 				+fw(400)
+				+fz(1rem)
+				+media-breakpoint-up(md)
+					+fz(r(18px))
 		+media-breakpoint-up(lg)
 			// padding-left: 2px
 			// padding-bottom: 0

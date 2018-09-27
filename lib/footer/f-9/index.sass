@@ -7,16 +7,18 @@
 	// background-color: darken(color-get($mau,trang) ,85%)
 	// position: relative
 	z-index: 1
-	color: color-get($mau, content-footer)
+	color: color-get($mau, trang)
 	+media-breakpoint-down(xs)
-		text-align: center
+		// text-align: center
 	h4
-		color: color-get($mau, title-footer)
+		color: color-get($mau, trang)
 		text-transform: uppercase
 		position: relative
-		+fz(1.2rem)
+		+fz(1rem)
 		+fw(600)
 		margin-bottom: 1.5rem
+		+media-breakpoint-up(lg)
+			+fz(r(16px))
 	.canhcam-sub
 		+pad(2rem 0)
 		width: 100%
@@ -88,13 +90,20 @@
 		+media-breakpoint-up(md)
 			+pad(4rem 0)
 		.item
-			color: color-get($mau, extra)
+			color: color-get($mau, trang)
 			i
-				+mar(0 0 1rem)
+				+lh(1.5)
+				color: color-get($mau, trang)
+				+mar(0 1rem 1rem 0)
+			p
+				+fz(1rem)
 			+media-breakpoint-up(lg)
 				max-width: 90%
+				// p
+				// 	+fz(r(16px))
+				// 	+fw(400)
 				i
-					+mar(0 1rem 0 0)
+					+mar(0 1rem 0)
 		.list-group
 			.list-group-item
 				display: inline-block
@@ -103,18 +112,18 @@
 				+pad(.5rem 0)
 				white-space: nowrap
 				+media-breakpoint-up(md)
-					+pad(.15rem 0)
+					+pad(.5rem 0)
 				a
-					font-size: .9rem
-					+link(color-get($mau,extra))
+					font-size: 1rem
+					+link(color-get($mau,trang))
 					text-decoration: none
 					&:hover, &:active
 						color: lighten(color-get($mau, extra), 10%)
 			.socials
 				a
-					color: color-get($mau,extra)
+					color: color-get($mau,trang)
 					display: flex
-					justify-content: center
+					justify-content: flex-start
 					align-items: center
 					text-decoration: none
 					+mar(0 0 1rem 0)
@@ -122,10 +131,15 @@
 						+fz(r(33px))
 					&:hover
 						color: lighten(color-get($mau, extra),10%)
+			// +media-breakpoint-up(lg)
+			// 	.list-group-item
+			// 		a
+			// 			+fz(r(16px))
+			// 			+fw(400)
 	.copyright
 		background: color-get($mau,footer)
 		+pad(1rem 0)
-		color: color-get($mau,content-footer)
+		color: color-get($mau,trang)
 		// .list-group
 		// 	.list-group-item
 		// 		display: inline-block
