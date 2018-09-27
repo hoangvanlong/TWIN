@@ -23,7 +23,7 @@
 			display: none
 			color: color-get($mau,trang)
 			padding: 1rem 2rem
-			border-bottom: 1px dashed lighten(color-get($mau,main),40%)
+			// border-bottom: 1px dashed lighten(color-get($mau,main),40%)
 			h2
 				margin-bottom: 0
 				+fz(2rem)
@@ -94,37 +94,60 @@
 					border-color: darken(color-get($mau,trang),5%)
 			.navbar-nav
 				order: 2
-				+pad(1rem 2rem)
+				// +pad(1rem 2rem)
+				+pad(0)
 				+fz(1.3rem)
 				font-weight: 300
 				.nav-item
 					.nav-link
-						+link(color-get($mau,trang), color-get($mau,trang), color-get($mau,trang))
+						+fz(1rem)
+						+fw(600)
+						text-transform: uppercase
+						+pad(1rem 2rem)
+						border-bottom: 1px solid color-get($mau, border-footer)
+						color: color-get($mau,trang)
+					.hot-line
+						+fz(1rem)
+						color: color-get($mau,trang)
+						+pad(1rem 2rem)
+						+mar(0)
+						background: color-get($mau, footer)
+						span
+							+fw(600)
+					&:first-child
+						.nav-link
+							border-top: 1px solid color-get($mau, border-footer)
 					.sub-menu
-						+pad(r(44px) r(36px))
+						// +pad(r(44px) 0)
+						+pad(1rem 4rem 0 4rem)
 						display: none
-						background: color-get($mau,header)
-						position: fixed
+						border-bottom: 1px solid color-get($mau, border-footer)
+						// background: color-get($mau,header)
+						// position: fixed
 						.h3
-							+fz(r(18px))
+							+fz(1rem)
 							+fw(500)
 							color: color-get($mau,content-menu)
-							+mar(0 0 2rem)
+							+mar(0 0 1rem)
 						.nav-sub-item
 							display: flex
 							align-items: center
-							min-height: r(73px)
-							max-height: r(73px)
-							+mar(0 0 2rem)
+							+mar(0 0 1rem 2rem)
 							img
-								margin-right: 2rem
+								display: none
 							.nav-sub-link
-								max-width: 45%
 								a
 									color: color-get($mau, trang)
 									text-decoration: none
 									+fw(300)
-									+fz(r(16px))
+									+fz(1rem)
+									&:hover
+										color: color-get($mau, content)
+					&:hover, &:active
+						.nav-link
+							color: color-get($mau, footer)
+						.hot-line
+							background: lighten(color-get($mau, footer), 5%)
 	&.expand
 		.navbar
 			.title
@@ -155,6 +178,8 @@
 					max-height: initial
 					max-width: 7rem
 			.navbar-nav
+				.hot-line
+					display: none
 				.nav-item
 					margin-left: 1px
 					.nav-link
