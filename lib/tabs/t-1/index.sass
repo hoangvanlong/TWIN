@@ -1,0 +1,75 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-tabs-1
+	+pad(2rem 0)
+	background: color-get($mau, xam-5)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.nav-tabs
+		justify-content: center
+		border: 0
+		+media-breakpoint-up(lg)
+			border-bottom: 1px solid #dee2e6
+		.nav-item
+			+fz(r(18px))
+			text-transform: uppercase
+			border: 0
+			margin-bottom: .5rem
+			width: 100%
+			text-align: center
+			background: color-get($mau, trang)
+			+media-breakpoint-up(lg)
+				background: 0
+				text-align: left
+				width: initial
+				.nav-link
+					position: relative
+					&:after
+						content: ''
+						height: 18px
+						width: 1px
+						display: block
+						+pos(abs, 50% 0 null null)
+						background: darken(color-get($mau,main),0%)
+						transform: translateX(-50%) translateY(-50%)
+			&:last-child
+				margin-right: 0
+				.nav-link
+					&:after
+						display: none
+			.nav-link
+				border: 0
+				color: darken(color-get($mau,trang),75%)
+				+bor-rad(0)
+				&.active
+					background: color-get($mau,main)
+					color: color-get($mau,trang)
+					+media-breakpoint-up(lg)
+						background: 0
+						color: color-get($mau,main)
+					// &:after
+					// 	width: calc(100% - 2px)
+					// 	+pos(abs, null 1px 0 null)
+	.tab-content
+		.tab-pane
+			+pad(2rem 0 0)
+			.row
+				.col-auto
+					+media-breakpoint-up(xl)
+						flex: 0 0 20%
+						+mar(0 0 1.5rem)
+					a
+						figure
+							figcaption
+								.h3
+									+fz(r(16px))
+									+fw(500)
+									text-align: center
+									text-transform: uppercase
+									margin-top: 1rem
+									color: color-get($mau, den)
+						&:hover, &:active, &:focus
+							text-decoration: none

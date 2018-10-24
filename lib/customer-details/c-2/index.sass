@@ -1,0 +1,69 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.twin-customer-details-2
+	background: color-get($mau, xam-5)
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.title
+		.h2
+			text-transform: uppercase
+			text-align: center
+			+fz(r(20px))
+			+fw(500)
+			color: color-get($mau, title)
+			+media-breakpoint-up(lg)
+				+fz(r(26px))
+	.owl-carousel
+		.item
+			a
+				&:hover, &:active, &:focus
+					text-decoration: none
+				figure
+					figcaption
+						.h3
+							+mar(1rem 0 0)
+							+fz(r(16px))
+							+fw(600)
+							color: color-get($mau, xam-2)
+							text-align: center
+							text-transform: uppercase
+		.owl-nav
+			position: absolute
+			display: block
+			top: 50%
+			color: color-get($mau, xam-6)
+			width: 100%
+			transform: translateY(-50%)
+			+mar(0)
+			.owl-prev
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+				span
+					display: none
+				&:after
+					+pos(abs, 0 null null -4rem)
+					display: block
+					content: "\e875"
+					font-family: "Linearicons-Free"
+					+fz(1.5rem)
+					transform: translateY(-50%)
+			.owl-next
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				span
+					display: none
+				&:after
+					+pos(abs, 0 -2rem null null)
+					display: block
+					content: "\e876"
+					font-family: "Linearicons-Free"
+					+fz(1.5rem)
+					transform: translateY(-50%)

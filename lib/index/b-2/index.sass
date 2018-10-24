@@ -4,7 +4,7 @@
 //////////////////////////////////////
 
 .twin-boxes-2
-	+bg-rad
+	// +bg-rad
 	.info 
 		width: 100%
 		+pad(4rem 0)
@@ -16,7 +16,7 @@
 			height: 0
 			border-right: 25px solid transparent
 			border-left: 25px solid transparent
-			border-top: 25px solid color-get($mau, extra)
+			border-top: 25px solid color-get($mau, trang)
 			position: absolute
 			top: 100%
 			left: 50%
@@ -31,7 +31,7 @@
 				height: 0
 				border-top: 30px solid transparent
 				border-bottom: 30px solid transparent
-				border-right: 30px solid color-get($mau, extra)
+				border-right: 30px solid color-get($mau, trang)
 				position: absolute
 				top: 50%
 				left: initial
@@ -43,7 +43,7 @@
 			flex-direction: column
 			align-items: center
 			.h3 
-				color: color-get($mau,trang)
+				color: color-get($mau,title)
 				+fw(600)
 				+fz(r(36px))
 				position: relative
@@ -53,22 +53,22 @@
 				+media-breakpoint-up(lg)
 					width: 100%
 					overflow: hidden
-				&:after
-					position: absolute
-					display: block
-					content: ""
-					width: 3rem
-					height: 3px
-					top: 120%
-					left: 50%
-					background: color-get($mau, trang)
-					transform: translateX(-50%) translateY(-50%)
-					+media-breakpoint-up(lg)
-						width: 50%
-						top: 50%
-						left: 0%
+				// &:after
+				// 	position: absolute
+				// 	display: block
+				// 	content: ""
+				// 	width: 3rem
+				// 	height: 3px
+				// 	top: 120%
+				// 	left: 50%
+				// 	background: color-get($mau, trang)
+				// 	transform: translateX(-50%) translateY(-50%)
+				// 	+media-breakpoint-up(lg)
+				// 		width: 50%
+				// 		top: 50%
+				// 		left: 0%
 			.brief-content
-				color: color-get($mau,trang)
+				color: color-get($mau,title)
 				+fz(r(15px))
 				+fw(300)
 				+mar(0 0 2rem)
@@ -134,8 +134,11 @@
 				&.list-items
 					.item
 						a
-							color: color-get($mau,trang)
+							color: color-get($mau,title)
 							text-decoration: none
+							figure
+								+bor-rad(10px)
+								border: 1px solid color-get($mau, xam-1)
 							h3
 								+fz(r(18px))
 								+fw(400)
@@ -145,7 +148,7 @@
 							img
 								+opacity(.8)
 							a
-								color: color-get($mau,den)
+								color: color-get($mau,title)
 
 
 	.canhcam-slider-box-2

@@ -1,0 +1,58 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.twin-gb-1
+	.item
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		&:first-child
+			+pad(3rem)
+		.box-content
+			text-align: center
+			.title
+				text-transform: uppercase
+				color: color-get($mau, title)
+				+fw(500)
+				+fz(r(20px))
+				+media-breakpoint-up(lg)
+					+fz(r(26px))
+			.content
+				+fw(300)
+				+fz(1rem)
+				+media-breakpoint-up(lg)
+					+fz(r(18px))
+			.button
+				display: flex
+				justify-content: space-between
+				.btn-more
+					color: color-get($mau, trang)
+					+bg-rad-2
+					border: 0
+					border-radius: 5px
+					+pad(.5rem 1rem)
+					+fz(r(18px))
+					&:first-child
+						+pad(.5rem 1rem .5rem 3.5rem)
+						position: relative
+						&:after
+							+pos(abs, 50% null null 1rem)
+							display: block
+							content: "\e830"
+							font-family: "Linearicons-Free"
+							+fz(1.8rem)
+							transform: translateY(-50%)
+					span
+						display: block
+						+fz(.8rem)
+					&:hover, &:focus, &:active
+						color: color-get($mau, duong-3)
+						background: color-get($mau, trang)
+						box-shadow: 0 0 0 1px color-get($mau, duong-3) inset
+			+media-breakpoint-up(lg)
+				text-align: left
+				max-width: 80%
+			+media-breakpoint-up(xl)
+				max-width: 65%

@@ -9,10 +9,88 @@
                 "index/b-1",
                 "index/b-2",
                 "index/b-3",
-                "index/b-4"
+                "index/b-4",
+                "index/b-5"
             ],
             "footer": [
                 "footer/f-9"
+            ]
+        },
+        "intro": {
+            "header": [
+                "header/h-7"
+            ],
+            "body": [
+                "slider/s-1",
+                "intro/i-1",
+                "intro/i-2",
+                "intro/i-3",
+                "intro/i-4"
+            ],
+            "footer": [
+                "footer/f-9"
+            ]
+        },
+        "customer": {
+            "header": [
+                "header/h-7"
+            ],
+            "body": [
+                "slider/s-1",
+                "customer/c-1",
+                "tabs/t-1"
+            ],
+            "footer": [
+                "footer/f-9"
+            ]
+        },
+        "news": {
+            "header": [
+                "header/h-7"
+            ],
+            "body": [
+                "slider/s-1",
+                "news/n-1",
+                "tabs/t-2"
+            ],
+            "footer": [
+                "footer/f-9"
+            ]
+        },
+        "contact": {
+            "header": [
+                "header/h-7"
+            ],
+            "body": [
+                "slider/s-1",
+                "contact/c-1",
+                "contact/c-2"
+            ],
+            "footer": [
+                "footer/f-9"
+            ]
+        },
+        "nav": {
+            "body": [
+                "nav/n-1"
+            ]
+        },
+        "gb": {
+            "body": [
+                "gb/g-1",
+                "gb/g-2",
+                "gb/g-3"
+            ]
+        },
+        "news-details": {
+            "body": [
+                "news-details/n-1"
+            ]
+        },
+        "customer-details": {
+            "body": [
+                "customer-details/c-1",
+                "customer-details/c-2"
             ]
         }
     }

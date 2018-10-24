@@ -1,0 +1,27 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.twin-contact-1
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.title
+		.h2
+			text-transform: uppercase
+			text-align: center
+			+fz(r(36px))
+			+fw(500)
+			color: color-get($mau, title)
+	.item
+		background: color-get($mau, xam-7)
+		+pad(2rem)
+		display: flex
+		flex-direction: column
+		.title
+			.h3
+				+fz(r(18px))
+				+fw(bold)
+				text-transform: uppercase
+				color: color-get($mau, duong-3)

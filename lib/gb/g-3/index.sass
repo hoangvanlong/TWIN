@@ -1,0 +1,69 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.twin-gb-3
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.title
+		.h2
+			text-align: center
+			text-transform: uppercase
+			color: color-get($mau, title)
+			+fw(500)
+			+fz(r(20px))
+			+media-breakpoint-up(lg)
+				+fz(r(26px))
+	.slider-for
+		width: 100%
+		margin: 30px auto 1px
+		.item
+			.box-img
+				width: r(225px)
+				+media-breakpoint-up(md)
+					width: r(380px)
+				+media-breakpoint-up(lg)
+					width: r(225px)
+				img
+					width: 100%
+
+	.slider-nav
+		width: 100%
+		margin: auto
+		.slick-track
+			.item
+				+mar(0 20px 0 0)
+				img
+					border: 1px solid color-get($mau, den)
+				&:active, &:hover, &:focus
+					outline: none
+					img
+						border: 1px solid color-get($mau, duong-3)
+	.slick-arrow
+		position: absolute
+		top: 95%
+		z-index: 50
+		color: black
+		+media-breakpoint-up(lg)
+			top: 92%
+	.slick-prev
+		left: 65%
+		+media-breakpoint-up(lg)
+			left: 78%
+		&:before
+			+pad(.5rem)
+			font-family: "Linearicons-Free"
+			content: "\e875"
+			color: black
+			border: 1px solid
+	.slick-next
+		right: 15%
+		+media-breakpoint-up(lg)
+		&:before
+			+pad(.5rem)
+			font-family: "Linearicons-Free"
+			content: "\e876"
+			color: black
+			border: 1px solid

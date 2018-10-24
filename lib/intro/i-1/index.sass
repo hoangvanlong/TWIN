@@ -1,0 +1,28 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.twin-intro-1
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.title
+		.h2
+			text-transform: uppercase
+			text-align: center
+			+fz(r(36px))
+			+fw(500)
+			color: color-get($mau, title)
+	.item
+		display: flex
+		justify-content: center
+		align-items: center
+		text-align: center
+		.box-content
+			+pad(0 3rem)
+			p
+				&:last-child
+					margin: 0
+		+media-breakpoint-up(lg)
+			text-align: left

@@ -1,0 +1,45 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.twin-intro-2
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.title
+		.h3
+			text-align: center
+			+fz(r(26px))
+			+fw(500)
+			color: color-get($mau, title)
+			position: relative
+			+media-breakpoint-up(lg)
+				+fz(r(36px))
+			&:after
+				+pos(abs, null null -.5rem 50%)
+				transform: translateX(-50%)
+				display: block
+				content: ""
+				width: 150px
+				height: 2px
+				background: color-get($mau, xam-1)
+				+media-breakpoint-up(lg)
+					bottom: -1rem
+	.item
+		.box-img
+			text-align: center
+		.box-content
+			+pad(1rem)
+			text-align: center
+			color: color-get($mau, xam-2)
+			.h4
+				+fz(r(16px))
+				+fw(500)
+			p
+				+fz(1rem)
+				+fw(300)
+				&:last-child
+					margin: 0
+		+media-breakpoint-up(lg)
+			text-align: left

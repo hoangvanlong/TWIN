@@ -1,0 +1,16 @@
+extends _layout/layout.pug
+block variables
+	- var title = "gb"
+	- var description = "Description for gb page"
+	- var bodyclass = "gb"
+	- var href = "/gb.html"
+block header
+	include ../lib/header/h-7/index.pug
+block body
+	include ../lib/slider/s-1/index.pug
+	include ../lib/nav/n-1/index.pug
+	include ../lib/gb/g-1/index.pug
+	include ../lib/gb/g-2/index.pug
+	include ../lib/gb/g-3/index.pug
+block footer
+	include ../lib/footer/f-9/index.pug

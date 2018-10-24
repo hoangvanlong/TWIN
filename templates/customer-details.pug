@@ -1,0 +1,15 @@
+extends _layout/layout.pug
+block variables
+	- var title = "customer-details"
+	- var description = "Description for customer-details page"
+	- var bodyclass = "customer-details"
+	- var href = "/customer-details.html"
+block header
+	include ../lib/header/h-7/index.pug
+block body
+	include ../lib/slider/s-1/index.pug
+	include ../lib/nav/n-1/index.pug
+	include ../lib/customer-details/c-1/index.pug
+	include ../lib/customer-details/c-2/index.pug
+block footer
+	include ../lib/footer/f-9/index.pug

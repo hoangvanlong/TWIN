@@ -8,16 +8,20 @@
 	.navbar
 		align-items: center
 		.phone
-			+fz(1rem)
-			+fw(400)
-			color: color-get($mau, trang)
+			a
+				+fz(1rem)
+				+fw(400)
+				color: color-get($mau, trang)
+				text-decoration: none
 		.user
-			+fz(1.5rem)
-			color: color-get($mau, trang)
-			// &:before
-			// 	display: block
-			// 	content: ""
-			// 	position: absolute
+			.box-img
+				width: r(120px)
+			+media-breakpoint-up(md)
+				.box-img
+					display: none
+			+media-breakpoint-up(xl)
+				.box-img
+						display: block
 		.title
 			order: 0
 			display: none
@@ -57,7 +61,12 @@
 			margin-bottom: 0
 			li
 				span
-					display: none
+					+fz(.9rem)
+					+fw(300)
+					color: color-get($mau, trang)
+					+pad(.35rem)
+					border-radius: 50%
+					border: 1px solid color-get($mau, trang)
 				img
 					max-height: 1.5rem
 		select

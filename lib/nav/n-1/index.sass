@@ -1,0 +1,46 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.twin-nav-1
+	.nav
+		+media-breakpoint-up(xl)
+			border-bottom: 1px solid color-get($mau, xam-3)
+		.nav-item
+			width: 100%
+			text-align: center
+			position: relative
+			+media-breakpoint-up(md)
+				width: 50%
+				&:after
+					+pos(abs, 50% 0 null null)
+					display: block
+					content: ""
+					width: 2px
+					height: 18px
+					background: color-get($mau, xam-2)
+					transform: translateX(-50%) translateY(-50%)
+					+media-breakpoint-up(xl)
+				&:nth-child(2n)
+					&:after
+						display: none
+			+media-breakpoint-up(xl)
+				width: initial
+				text-align: initial
+				&:nth-child(2n)
+					&:after
+						display: block
+				&:last-child
+					&:after
+						display: none
+			.nav-link
+				+pad(1rem 1.5rem)
+				color: color-get($mau, xam-2)
+				text-transform: uppercase
+				+fz(1rem)
+				+media-breakpoint-up(lg)
+					+fz(r(18px))
+			&:hover, &:focus, &.active
+				.nav-link
+					color: color-get($mau, duong-3)

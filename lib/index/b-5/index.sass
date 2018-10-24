@@ -1,0 +1,102 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-testimonials-1
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.testimonial-slider
+		.item
+			text-align: center
+			width: 100%
+			img
+				max-width: 90px
+				+bor-rad(50%)
+				display: inline-block
+			figcaption
+				margin: 0 auto
+				+media-breakpoint-up(lg)
+					max-width: 866px
+				blockquote
+					font-style: italic
+					margin-top: 1rem
+					position: relative
+					line-height: 1.5rem
+					display: inline-flex
+					+pad(0 3rem)
+					color: color-get($mau, trang)
+					+fz(20px)
+					&:before
+						content: ''
+						display: inline-block
+						color: darken(color-get($mau,trang),35%)
+						width: 100%
+						height: 109px
+						+pos(abs, 0 null null 0)
+						transform: translateY(-50%)
+						background: url("../img/twin/index/box-5/before-blockquote.png")
+						background-repeat: no-repeat
+				.author
+					color: color-get($mau,trang)
+					+fz(16px)
+					+mar(0 0 4rem 0)
+					span
+						display: block
+						+fz(14px)
+						margin-top: .5rem
+						color: color-get($mau,duong-1)
+	.owl-carousel
+		position: relative
+		// Main
+		.owl-stage-outer
+			.owl-stage
+				display: flex
+			.owl-item
+				display: flex
+		// Nav
+		.owl-nav
+			text-align: center
+			color: color-get($mau, xam-1)
+			button
+				+fz(30px)
+				+media-breakpoint-up(lg)
+					+fz(68px)
+				&.owl-prev, &.owl-next
+					+mar(.5rem)
+					+pad(.5rem_)
+					+bor-rad(50%)
+					text-align: center
+					&:focus
+						outline: none
+				+media-breakpoint-up(lg)
+					&.owl-prev
+						transform: translateY(-50%)
+						+pos(abs, 50% null null 3rem)
+					&.owl-next
+						transform: translateY(-50%)
+						+pos(abs, 50% 3rem null null)
+				&:hover, &.active
+					&.owl-prev, &.owl-next
+						color: color-get($mau,main)
+				&.disabled
+					+opacity(.5)
+		// Dots
+		.owl-dots
+			+pos(abs, null null 0 0)
+			width: 100%
+			text-align: center
+			.owl-dot
+				+mar(.5rem)
+				&:focus
+					outline: none
+				span
+					background: darken(color-get($mau,trang),5%)
+					width: .7rem
+					height: .7rem
+					display: block
+					+bor-rad(50%)
+				&.active
+					span
+						background: color-get($mau,main)

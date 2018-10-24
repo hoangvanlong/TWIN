@@ -1,0 +1,44 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.twin-gb-2
+	background: color-get($mau, xam-4)
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.title
+		.h2
+			text-align: center
+			text-transform: uppercase
+			color: color-get($mau, title)
+			+fw(500)
+			+fz(r(20px))
+			+media-breakpoint-up(lg)
+				+fz(r(26px))
+	.item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		+media-breakpoint-up(lg)
+			display: initial
+		.box-content
+			+media-breakpoint-up(lg)
+				text-align: right
+				+pad(1rem)
+		figure
+			+media-breakpoint-up(lg)
+				display: flex
+				align-items: center
+			.box-img
+				text-align: center
+				+media-breakpoint-up(lg)
+					text-align: left
+					width: 88px
+					height: 88px
+					+mar(.75rem 3rem)
+			figcaption
+				+media-breakpoint-up(lg)
+					max-width: 30%
